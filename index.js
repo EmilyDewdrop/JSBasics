@@ -33,7 +33,6 @@ let movieData = {
       runtime: 170,
     },
     "Fantastic Mr. Fox": {
-      year: 2009,
       plot: "An urbane fox cannot resist returning to his farm raiding ways and then must help his community survive the farmers' retaliation.",
       cast: [
         "George Clooney",
@@ -42,6 +41,7 @@ let movieData = {
         "Jason Schwartzman",
       ],
       runtime: 147,
+      year: 2009,
       rating: 7.9,
     },
     "The Grand Budapest Hotel": {
@@ -80,8 +80,11 @@ let movieData = {
     document.getElementById("movietext").appendChild(para1);
   }
 
+  for (const [key, value] of Object.entries(fmfValue)) {
+    console.log(`${key}: ${value}`);
+  }
   const para2 = document.createElement("p");
-  para2.innerHTML = (Object.values(fmfValue))
+  para2.innerHTML = (Object.entries(fmfValue))
 
   document.getElementById("fmf").onclick = function() {getfmf()};
 
@@ -89,7 +92,28 @@ let movieData = {
     document.getElementById("movietext").appendChild(para2);
   }
 
+  for (const [key, value] of Object.entries(rtValue)) {
+    console.log(`${key}: ${value}`);
+  }
+  const para3 = document.createElement("p");
+  para3.innerHTML = (Object.entries(rtValue))
 
- 
+  document.getElementById("rt").onclick = function() {getrt()};
+
+  function getrt() {
+    document.getElementById("movietext").appendChild(para3);
+  }
+
+  for (const [key, value] of Object.entries(gbhValue)) {
+    console.log(`${key}: ${value}`);
+  }
+  const para4 = document.createElement("p");
+  para4.innerHTML = (Object.entries(gbhValue))
+
+  document.getElementById("gbh").onclick = function() {getgbh()};
+
+  function getgbh() {
+    document.getElementById("movietext").appendChild(para4);
+  }
 
   
