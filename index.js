@@ -1,10 +1,8 @@
 
-function myFunction() {
+function buttonDrop() {
     document.getElementById("myDropdown").classList.toggle("show");
+    document.getElementById("movetext").innerHTML = "Choose another film";
   }
-
-function getfilm(plot, cast, runtime, rating, year) {console.log(plot, cast, runtime, rating, year)}
-
 
   
   window.onclick = function(event) {
@@ -20,7 +18,7 @@ function getfilm(plot, cast, runtime, rating, year) {console.log(plot, cast, run
     }
   }
 
-const movieData = {
+let movieData = {
     "The Darjeeling Limited": {
       plot: "A year after their father's funeral, three brothers travel across India by train in an attempt to bond with each other.",
       cast: ["Jason Schwartzman", "Owen Wilson", "Adrien Brody"],
@@ -56,8 +54,41 @@ const movieData = {
     },
   };
 
-  document.getElementById("dl").onclick = movieData["The Darjeeling Limited"]
 
-  function displayMovieData() {
-    document.getElementById("movietext").innerHTML = Date(getfilm);
+
+  
+
+  const dlValue = movieData["The Darjeeling Limited"];
+  console.log(Object.values(dlValue));
+
+  const fmfValue = movieData["Fantastic Mr. Fox"]
+  console.log(Object.values(fmfValue));
+
+  const rtValue = movieData["The Royal Tenenbaums"]
+  console.log(Object.values(rtValue));
+
+  const gbhValue = movieData["The Grand Budapest Hotel"]
+  console.log(Object.values(gbhValue));
+
+  const para1 = document.createElement("p");
+  para1.innerHTML = (Object.values(dlValue))
+
+  document.getElementById("dl").onclick = function() {getdl()};
+
+  function getdl() {
+    document.getElementById("movietext").appendChild(para1);
   }
+
+  const para2 = document.createElement("p");
+  para2.innerHTML = (Object.values(fmfValue))
+
+  document.getElementById("fmf").onclick = function() {getfmf()};
+
+  function getfmf() {
+    document.getElementById("movietext").appendChild(para2);
+  }
+
+
+ 
+
+  
