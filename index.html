@@ -12,16 +12,18 @@
       Welcome to the unofficial and incredibly minimalist Internet Movie
       Database!
     </h1>
-    <div class="dropdown">
-      <button onclick="buttonDrop()" class="dropbtn">Pick a film</button>
-      <div id="myDropdown" class="dropdown-content">
-        <a id="dl">The Darjeeling Limited</a>
-        <a id="rt">The Royal Tenenbaums</a>
-        <a id="fmf">Fantastic Mr. Fox</a>
-        <a id="gbh">The Grand Budapest Hotel</a>
-      </div>
+    <div class="infoContainer">
+      <div class="dropdown">
+        <button onclick="buttonDrop()" onclick="deleteText()" class="dropbtn">Pick a film</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a id="dl">The Darjeeling Limited</a>
+          <a id="rt">The Royal Tenenbaums</a>
+          <a id="fmf">Fantastic Mr. Fox</a>
+          <a id="gbh">The Grand Budapest Hotel</a>
+        </div>
+      </div class="info">
+      <p id="movietext"></p>
     </div>
-    <p id="movietext"></p>
     <script src="index.js"></script>
   </body>
 </html>

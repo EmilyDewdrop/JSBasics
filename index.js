@@ -3,6 +3,9 @@ function buttonDrop() {
     document.getElementById("myDropdown").classList.toggle("show");
   }
 
+  function deleteText() {
+    document.getElementsbyID("info").style.display="none";
+  }
   
   window.onclick = function(event) {
     if (!event.target.matches('.dropbtn')) {

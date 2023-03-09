@@ -40,3 +40,16 @@ body{
   .dropdown a:hover {background-color: #ddd;}
   
   .show {display: block;}
+
+  p{
+    font-size: 30px;
+  }
+
+  .infoContainer{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .info {
+    width: 10rem;
+  }
