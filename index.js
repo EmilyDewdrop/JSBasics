@@ -1,7 +1,6 @@
 
 function buttonDrop() {
     document.getElementById("myDropdown").classList.toggle("show");
-    document.getElementById("movetext").innerHTML = "Choose another film";
   }
 
   
@@ -55,9 +54,7 @@ let movieData = {
   };
 
 
-
-  
-
+ 
   const dlValue = movieData["The Darjeeling Limited"];
   console.log(Object.values(dlValue));
 
@@ -70,8 +67,12 @@ let movieData = {
   const gbhValue = movieData["The Grand Budapest Hotel"]
   console.log(Object.values(gbhValue));
 
+  for (const [key, value] of Object.entries(dlValue)) {
+    console.log(`${key}: ${value}`);
+  }
+
   const para1 = document.createElement("p");
-  para1.innerHTML = (Object.values(dlValue))
+  para1.innerHTML = (Object.entries(dlValue))
 
   document.getElementById("dl").onclick = function() {getdl()};
 
