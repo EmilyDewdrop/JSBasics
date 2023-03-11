@@ -74,49 +74,43 @@ let movieData = {
     console.log(`${key}: ${value}`);
   }
 
-  const para1 = document.createElement("p");
-  para1.innerHTML = (Object.entries(dlValue))
+  
 
   document.getElementById("dl").onclick = function() {getdl()};
 
   function getdl() {
-    document.getElementById("movietext").appendChild(para1);
+    document.getElementById("movietext").innerHTML = (Object.entries(dlValue));
   }
+
 
   for (const [key, value] of Object.entries(fmfValue)) {
     console.log(`${key}: ${value}`);
   }
-  const para2 = document.createElement("p");
-  para2.innerHTML = (Object.entries(fmfValue))
 
   document.getElementById("fmf").onclick = function() {getfmf()};
 
   function getfmf() {
-    document.getElementById("movietext").appendChild(para2);
+    document.getElementById("movietext").innerHTML = (Object.entries(fmfValue));
   }
 
   for (const [key, value] of Object.entries(rtValue)) {
     console.log(`${key}: ${value}`);
   }
-  const para3 = document.createElement("p");
-  para3.innerHTML = (Object.entries(rtValue))
 
   document.getElementById("rt").onclick = function() {getrt()};
 
   function getrt() {
-    document.getElementById("movietext").appendChild(para3);
+    document.getElementById("movietext").innerHTML = (Object.entries(rtValue));
   }
 
   for (const [key, value] of Object.entries(gbhValue)) {
     console.log(`${key}: ${value}`);
   }
-  const para4 = document.createElement("p");
-  para4.innerHTML = (Object.entries(gbhValue))
 
   document.getElementById("gbh").onclick = function() {getgbh()};
 
   function getgbh() {
-    document.getElementById("movietext").appendChild(para4);
+    document.getElementById("movietext").innerHTML = (Object.entries(gbhValue));
   }
 
   
